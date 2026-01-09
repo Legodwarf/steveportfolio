@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Parker - Data Analytics Portfolio</title>
+    <title>{{PAGE_TITLE}}</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-links">
-                <a href="index.html#home" class="nav-link">Home</a>
-                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="{{HOME_URL}}#home" class="nav-link">Home</a>
+                <a href="{{HOME_URL}}#projects" class="nav-link">Projects</a>
             </div>
         </nav>
     </header>
@@ -63,38 +63,7 @@
             <div class="container">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
-                                        <!-- New Product Analysis -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">New Product Analysis</h3>
-                            <p class="project-description">
-                                Comprehensive project analyzing a new product launch for a fictional vacuum manufacturer.
-                            </p>
-                            <a href="projects/new-product-analysis.html?from=index.html" class="project-link">View Details →</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 2 -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Project 2</h3>
-                            <p class="project-description">
-                                Under Construction...
-                            </p>
-                            <a href="projects/project-2.html?from=index.html" class="project-link">View Details →</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Project 3</h3>
-                            <p class="project-description">
-                                Under Construction...
-                            </p>
-                            <a href="projects/project-3.html?from=index.html" class="project-link">View Details →</a>
-                        </div>
-                    </article>
+                    {{PROJECTS_GRID}}
                 </div>
             </div>
         </section>

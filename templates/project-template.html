@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PROJECT_TITLE}} - Stephen Parker Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="{{HOME_URL}}" class="nav-link">Home</a>
+                <a href="{{HOME_URL}}#projects" class="nav-link">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Detail Content -->
+    <main class="project-detail">
+        <div class="container">
+            <a href="{{HOME_URL}}#projects" class="back-link" id="back-link">← Back to Projects</a>
+            
+            <div class="project-header">
+                <h1>{{PROJECT_TITLE}}</h1>
+                <div class="project-meta">
+                    <span>Technology: {{TECHNOLOGIES}}</span>
+                    <span>Date: {{DATE}}</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <!-- Overview Section -->
+                <section class="content-section">
+                    <h2>Overview</h2>
+                    <p>
+                        {{OVERVIEW}}
+                    </p>
+                </section>
+
+                <!-- Objectives Section -->
+                <section class="content-section">
+                    <h2>Objectives</h2>
+                    <ul>
+                        {{OBJECTIVES}}
+                    </ul>
+                </section>
+
+                <!-- Methodology Section -->
+                <section class="content-section">
+                    <h2>Methodology</h2>
+                    <p>
+                        {{METHODOLOGY}}
+                    </p>
+                </section>
+
+                <!-- Key Findings/Results Section -->
+                <section class="content-section">
+                    <h2>Key Findings / Results</h2>
+                    <p>
+                        {{KEY_FINDINGS}}
+                    </p>
+                </section>
+
+                <!-- Code Samples Section -->
+                <section class="content-section">
+                    <h2>Code Samples</h2>
+                    <p>Below are some code samples from this project:</p>
+                    
+                    {{CODE_SAMPLES}}
+                </section>
+
+                <!-- Technologies Used Section -->
+                <section class="content-section">
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        {{TECHNOLOGIES_LIST}}
+                    </ul>
+                </section>
+
+                <!-- Lessons Learned Section (Optional) -->
+                <section class="content-section">
+                    <h2>Lessons Learned</h2>
+                    <p>
+                        {{LESSONS_LEARNED}}
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Stephen Parker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

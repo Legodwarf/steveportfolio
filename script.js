@@ -52,5 +52,25 @@ document.addEventListener('DOMContentLoaded', function() {
             link.style.fontWeight = '600';
         }
     });
+    
+    // Handle back link for project pages - read from URL parameter
+    const backLink = document.getElementById('back-link');
+    if (backLink) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromPage = urlParams.get('from');
+        if (fromPage) {
+            // Update back link and navigation links to point to the correct homepage
+            const homeUrl = '../' + fromPage;
+            backLink.setAttribute('href', homeUrl + '#projects');
+            
+            // Update navigation links
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && (href.includes('index.html') || href.startsWith('{{'))) {
+                    link.setAttribute('href', homeUrl + (href.includes('#') ? href.substring(href.indexOf('#')) : ''));
+                }
+            });
+        }
+    }
 });
 
