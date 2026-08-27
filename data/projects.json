@@ -7,6 +7,7 @@
       "technologies": "SQL, Python, Excel",
       "date": "November 2024",
       "filename": "new-product-analysis.html",
+      "repoUrl": "",
       "overview": "A Rigorous project analyzing a new product launch for a fictional vacuum manufacturer. Analyses include financial projections (NPV, Ecpected Cost) and a Balanced Scorecard incorporating quantitative and qualitative data.",
       "objectives": [
         "Identify key metrics for picking a product manager",
@@ -23,36 +24,37 @@
       "lessonsLearned": "This project was a turning point in my education. Prior to this, I was unsure of what major to pursue. This project showed me that data analytics is just solving puzzles with data as the pieces. I immediately contacted my academic advisor and changed majors to Data Analytics.",
       "codeSamples": [
         {
-          "title": "Sample 1: [Description]",
-          "code": "# Your code sample will go here\n# Example Python code\nimport pandas as pd\nimport numpy as np\n\n# [Your code here]"
+          "title": "Sample 1: Basic input validation",
+          "code": "validMonth = 0\nvalidBonus = 0\n\n# Receive/Validate a minimum amount of months at company\nwhile validMonth == 0:\n  numMonths = input('Please enter the minimum number of months working at the company you require to be a Product Manager: ')\n  try:\n    numMonths = int(numMonths)\n    validMonth = 1\n  except:\n    print(\"What you entered wasn't an integer! Please enter a whole number!\")"
         },
         {
-          "title": "Sample 2: [Description]",
-          "code": "# Additional code sample\n# [Your code here]"
+          "title": "Sample 2: Running SQL Queries within a Python script",
+          "code": "query = f\"\"\"SELECT empName, RelToCEO, CurrSalary\nFROM Employee\nWHERE MonthsatCo <= {numMonths} AND CurrSalary >= {salary}\"\"\"\n# Execute Query and collect results\ncursor.execute(query)\nsqlOutput = cursor.fetchall()\nfor record in sqlOutput:\n  print(f'\nA potential product manager is {record[0]}, {record[1]}.')\n  print(f'They are {record[2]} to the CEO, and earn ${float(record[3])} each year.')\n  print(f'Their required bonus for completing a project is ${float(record[3])*0.09}')"
         }
       ]
     },
     {
-      "id": "project-2",
-      "title": "Project 2",
-      "summary": "Under Construction...",
-      "technologies": "[Technology Stack]",
-      "date": "[Project Date]",
-      "filename": "project-2.html",
-      "overview": "Under Construction...",
+      "id": "home-server",
+      "title": "Home Server",
+      "summary": "Turned an old desktop into a home server to practice Docker, automation, and self-hosted tools that now power other projects.",
+      "technologies": "Docker, Python",
+      "date": "Jan 2026 - Present",
+      "filename": "home-server.html",
+      "repoUrl": "",
+      "overview": "I decided to turn an old desktop I acquired into a home server. I wanted to improve my technical competencies and gain a better undestanding of the technologies powering everyday products. The server was initially a sandbox to mess around in, but is gradually becoming something I rely on to power other projects.",
       "objectives": [
-        "[Objective 1]",
-        "[Objective 2]",
-        "[Objective 3]"
+        "Understand server-client relationships",
+        "Practice with new technologies",
+        "Protect my personal data"
       ],
-      "methodology": "Under Construction...",
-      "keyFindings": "Under Construction...",
+      "methodology": "I started by installing Docker Desktop, a tool I had heard about at school. I initially spun up containers for N8N (an automation platform), and Jellyfin (a media server). I am currently testing budgeting tools, and building automations to accelerate my workflows.",
+      "keyFindings": "Sometimes a tool sounds really cool, but is useless without a plan.\n\nIt's easy to get sidetracked by shiny new toys, but just adding more features doesn't always add value.",
       "technologiesList": [
-        "[Technology 1]",
-        "[Technology 2]",
-        "[Technology 3]"
+        "Docker",
+        "N8N",
+        "OSS"
       ],
-      "lessonsLearned": "[Optional: Share key takeaways and lessons learned from this project]",
+      "lessonsLearned": "This project has been a great exercise in limiting scope creep and staying within limitations. I periodically have gotten sidetracked by shopping for new hardware to add more features, but am staying focused on really understanding the technologies I am using. My next steps are moving to Linux, and reconstructing my containers with docker compose instead of relying on GUIs.",
       "codeSamples": [
         {
           "title": "Sample 1: [Description]",
@@ -65,34 +67,32 @@
       ]
     },
     {
-      "id": "project-3",
-      "title": "Project 3",
-      "summary": "Under Construction...",
-      "technologies": "[Technology Stack]",
-      "date": "[Project Date]",
-      "filename": "project-3.html",
-      "overview": "[Provide a comprehensive overview of the project, including its purpose, goals, and significance]",
+      "id": "real-estate",
+      "title": "Real Estate Data Analysis/Data Mining",
+      "summary": "A comprehensive and practical exploration of the CRISP-DM methodology, using a sample real estate dataset.",
+      "technologies": "Python, Pandas, Matplotlib, Seaborn",
+      "date": "May 2026",
+      "filename": "real-estate.html",
+      "repoUrl": "",
+      "overview": "This project was a start to finish implementation of the CRISP-DM methodology, using a sample real estate dataset. The dataset was provided in an excel file, leaving me to clean and prepare the data for analysis. The project was then implemented using the CRISP-DM methodology, and the results were analyzed and reported on.",
       "objectives": [
-        "[Objective 1]",
-        "[Objective 2]",
-        "[Objective 3]"
+        "Practice with the CRISP-DM methodology",
+        "Practice with the Python data analysis toolkit",
+        "Become familiar with critical libraries like pandas, matplotlib, and seaborn"
       ],
-      "methodology": "[Describe the approach, tools, and techniques used in the project]",
-      "keyFindings": "[Describe the key findings, insights, or results obtained from the project]",
+      "methodology": "The project started with a messy dataset. Then following CRISP-DM as a framework, we were briefed on the business questions involved (should this real estate company expand into short term rentals in Nashville?) and context behind the project. I then cleaned the data preparatory to exploratory analysis. Once the data was undestood, we prepared it for modeling and built models to determine what kinds of properties would make the best investments.",
+      "keyFindings": "Based on the data, Nashville was a good market to invest in. Additionally, larger properties (based on how many people they can accommodate) seemed to be the best investments.",
       "technologiesList": [
-        "[Technology 1]",
-        "[Technology 2]",
-        "[Technology 3]"
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn"
       ],
-      "lessonsLearned": "[Optional: Share key takeaways and lessons learned from this project]",
+      "lessonsLearned": "This was a great way to flex some of my coding muscles and apply the skills I have learned. I also appreciated the opportunity to practice within an industry standard framework like CRISP-DM.",
       "codeSamples": [
         {
-          "title": "Sample 1: [Description]",
-          "code": "# Your code sample will go here\n# Example Python code\nimport pandas as pd\nimport numpy as np\n\n# [Your code here]"
-        },
-        {
-          "title": "Sample 2: [Description]",
-          "code": "# Additional code sample\n# [Your code here]"
+          "title": "Sample 1: Transforming variables for correlation analysis",
+          "code": "df_corrT = pd.DataFrame()\n# create new SQUARE ROOT transformed variables\ndf_corrT['calculated_host_listings_count_sqrt'] = np.sqrt(df_corr['calculated_host_listings_count'])\ndf_corrT['calculated_host_listings_count_sqrt']=np.sqrt(df_corr['host_listings_count'])\n# run a spearman correlation analysis on your dataframe, then store values in cor_matrix\ncor_matrix = df_corrT.corr(method = 'spearman')\n# display the formatted matrix (i.e., with background gradient, etc.)\ncor_matrix.style.background_gradient(cmap = 'seismic', axis = None, vmin = -1, vmax = 1)"
         }
       ]
     }

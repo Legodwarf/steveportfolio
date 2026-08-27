@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3 - Stephen Parker Portfolio</title>
+    <title>Real Estate Data Analysis/Data Mining - Stephen Parker Portfolio</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -23,10 +23,10 @@
             <a href="../index.html#projects" class="back-link" id="back-link">← Back to Projects</a>
             
             <div class="project-header">
-                <h1>Project 3</h1>
+                <h1>Real Estate Data Analysis/Data Mining</h1>
                 <div class="project-meta">
-                    <span>Technology: [Technology Stack]</span>
-                    <span>Date: [Project Date]</span>
+                    <span>Technology: Python, Pandas, Matplotlib, Seaborn</span>
+                    <span>Date: May 2026</span>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
                 <section class="content-section">
                     <h2>Overview</h2>
                     <p>
-                        [Provide a comprehensive overview of the project, including its purpose, goals, and significance]
+                        This project was a start to finish implementation of the CRISP-DM methodology, using a sample real estate dataset. The dataset was provided in an excel file, leaving me to clean and prepare the data for analysis. The project was then implemented using the CRISP-DM methodology, and the results were analyzed and reported on.
                     </p>
                 </section>
 
@@ -43,9 +43,9 @@
                 <section class="content-section">
                     <h2>Objectives</h2>
                     <ul>
-                        <li>[Objective 1]</li>
-                        <li>[Objective 2]</li>
-                        <li>[Objective 3]</li>
+                        <li>Practice with the CRISP-DM methodology</li>
+                        <li>Practice with the Python data analysis toolkit</li>
+                        <li>Become familiar with critical libraries like pandas, matplotlib, and seaborn</li>
                     </ul>
                 </section>
 
@@ -53,7 +53,7 @@
                 <section class="content-section">
                     <h2>Methodology</h2>
                     <p>
-                        [Describe the approach, tools, and techniques used in the project]
+                        The project started with a messy dataset. Then following CRISP-DM as a framework, we were briefed on the business questions involved (should this real estate company expand into short term rentals in Nashville?) and context behind the project. I then cleaned the data preparatory to exploratory analysis. Once the data was undestood, we prepared it for modeling and built models to determine what kinds of properties would make the best investments.
                     </p>
                 </section>
 
@@ -61,7 +61,7 @@
                 <section class="content-section">
                     <h2>Key Findings / Results</h2>
                     <p>
-                        [Describe the key findings, insights, or results obtained from the project]
+                        Based on the data, Nashville was a good market to invest in. Additionally, larger properties (based on how many people they can accommodate) seemed to be the best investments.
                     </p>
                 </section>
 
@@ -73,25 +73,17 @@
                                         <!-- Code Sample 1 -->
                     <div class="code-sample">
                         <div class="code-header">
-                            <h3>Sample 1: [Description]</h3>
+                            <h3>Sample 1: Transforming variables for correlation analysis</h3>
                             <button class="copy-button" onclick="copyCode(this)">Copy</button>
                         </div>
-                        <pre><code># Your code sample will go here
-# Example Python code
-import pandas as pd
-import numpy as np
-
-# [Your code here]</code></pre>
-                    </div>
-
-                    <!-- Code Sample 2 -->
-                    <div class="code-sample">
-                        <div class="code-header">
-                            <h3>Sample 2: [Description]</h3>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code># Additional code sample
-# [Your code here]</code></pre>
+                        <pre><code>df_corrT = pd.DataFrame()
+# create new SQUARE ROOT transformed variables
+df_corrT['calculated_host_listings_count_sqrt'] = np.sqrt(df_corr['calculated_host_listings_count'])
+df_corrT['calculated_host_listings_count_sqrt']=np.sqrt(df_corr['host_listings_count'])
+# run a spearman correlation analysis on your dataframe, then store values in cor_matrix
+cor_matrix = df_corrT.corr(method = 'spearman')
+# display the formatted matrix (i.e., with background gradient, etc.)
+cor_matrix.style.background_gradient(cmap = 'seismic', axis = None, vmin = -1, vmax = 1)</code></pre>
                     </div>
                 </section>
 
@@ -99,9 +91,10 @@ import numpy as np
                 <section class="content-section">
                     <h2>Technologies Used</h2>
                     <ul>
-                                                <li>[Technology 1]</li>
-                        <li>[Technology 2]</li>
-                        <li>[Technology 3]</li>
+                                                <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
                     </ul>
                 </section>
 
@@ -109,7 +102,7 @@ import numpy as np
                 <section class="content-section">
                     <h2>Lessons Learned</h2>
                     <p>
-                        [Optional: Share key takeaways and lessons learned from this project]
+                        This was a great way to flex some of my coding muscles and apply the skills I have learned. I also appreciated the opportunity to practice within an industry standard framework like CRISP-DM.
                     </p>
                 </section>
             </div>
@@ -119,7 +112,7 @@ import numpy as np
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Stephen Parker. All rights reserved.</p>
+            <p>&copy; 2026 Stephen Parker. All rights reserved.</p>
         </div>
     </footer>
 

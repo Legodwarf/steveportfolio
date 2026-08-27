@@ -1,13 +1,13 @@
 {
   "default": {
     "url": "index.html",
-    "projects": ["new-product-analysis", "project-2", "project-3"]
+    "projects": ["new-product-analysis", "home-server", "real-estate"]
   },
   "homepages": [
     {
       "id": "acme-corp",
       "url": "acme-corp.html",
-      "projects": ["new-product-analysis", "project-2", "project-3"]
+      "projects": ["new-product-analysis", "home-server", "real-estate"]
     }
   ]
 }

@@ -75,25 +75,39 @@ All methods and findings were documented in a 7 page report.
                                         <!-- Code Sample 1 -->
                     <div class="code-sample">
                         <div class="code-header">
-                            <h3>Sample 1: [Description]</h3>
+                            <h3>Sample 1: Basic input validation</h3>
                             <button class="copy-button" onclick="copyCode(this)">Copy</button>
                         </div>
-                        <pre><code># Your code sample will go here
-# Example Python code
-import pandas as pd
-import numpy as np
+                        <pre><code>validMonth = 0
+validBonus = 0
 
-# [Your code here]</code></pre>
+# Receive/Validate a minimum amount of months at company
+while validMonth == 0:
+  numMonths = input('Please enter the minimum number of months working at the company you require to be a Product Manager: ')
+  try:
+    numMonths = int(numMonths)
+    validMonth = 1
+  except:
+    print("What you entered wasn't an integer! Please enter a whole number!")</code></pre>
                     </div>
 
                     <!-- Code Sample 2 -->
                     <div class="code-sample">
                         <div class="code-header">
-                            <h3>Sample 2: [Description]</h3>
+                            <h3>Sample 2: Running SQL Queries within a Python script</h3>
                             <button class="copy-button" onclick="copyCode(this)">Copy</button>
                         </div>
-                        <pre><code># Additional code sample
-# [Your code here]</code></pre>
+                        <pre><code>query = f"""SELECT empName, RelToCEO, CurrSalary
+FROM Employee
+WHERE MonthsatCo <= {numMonths} AND CurrSalary >= {salary}"""
+# Execute Query and collect results
+cursor.execute(query)
+sqlOutput = cursor.fetchall()
+for record in sqlOutput:
+  print(f'
+A potential product manager is {record[0]}, {record[1]}.')
+  print(f'They are {record[2]} to the CEO, and earn ${float(record[3])} each year.')
+  print(f'Their required bonus for completing a project is ${float(record[3])*0.09}')</code></pre>
                     </div>
                 </section>
 
@@ -121,7 +135,7 @@ import numpy as np
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Stephen Parker. All rights reserved.</p>
+            <p>&copy; 2026 Stephen Parker. All rights reserved.</p>
         </div>
     </footer>
 

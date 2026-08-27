@@ -42,6 +42,18 @@ function generateProjectPage(project) {
                         <pre><code>${sample.code}</code></pre>
                     </div>`;
     }).join('\n\n');
+
+    const repoUrl = (project.repoUrl || '').trim();
+    const repoSectionHtml = repoUrl
+        ? `
+                <!-- Full Documentation & Code Section -->
+                <section class="content-section">
+                    <h2>Full Documentation &amp; Code</h2>
+                    <p>The complete documentation and source code for this project are available in the repository:</p>
+                    <a href="${repoUrl}" class="project-link" target="_blank" rel="noopener noreferrer">View Repository →</a>
+                </section>
+`
+        : '';
     
     const replacements = {
         'PROJECT_TITLE': project.title,
@@ -52,6 +64,7 @@ function generateProjectPage(project) {
         'METHODOLOGY': project.methodology,
         'KEY_FINDINGS': project.keyFindings,
         'CODE_SAMPLES': codeSamplesHtml,
+        'REPO_SECTION': repoSectionHtml,
         'TECHNOLOGIES_LIST': technologiesListHtml,
         'LESSONS_LEARNED': project.lessonsLearned,
         'HOME_URL': '../index.html' // Default, will be overridden by JavaScript

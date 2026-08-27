@@ -28,6 +28,7 @@ Open `data/projects.json` and add a new project object to the `projects` array. 
   "technologies": "Technology Stack (e.g., 'Python, SQL, Tableau')",
   "date": "Month Year (e.g., 'January 2024')",
   "filename": "project-filename.html",
+  "repoUrl": "https://github.com/username/repo (optional; omit or leave empty to hide the section)",
   "overview": "Detailed overview paragraph describing the project",
   "objectives": [
     "Objective 1",
@@ -60,6 +61,7 @@ Open `data/projects.json` and add a new project object to the `projects` array. 
 - **`id`**: Must be unique. Use lowercase with hyphens (e.g., `"customer-churn-analysis"`)
 - **`filename`**: Should match the project ID but with `.html` extension (e.g., `"customer-churn-analysis.html"`)
 - **`summary`**: This is what appears on the homepage project cards. Keep it concise (1-2 sentences)
+- **`repoUrl`**: Optional link to the project's repository (full documentation and code). If omitted or empty, the "Full Documentation & Code" section is not shown on the project page.
 - **`codeSamples`**: You can have any number of code samples. Each should have a `title` and `code` field
 - **Arrays**: For `objectives`, `technologiesList`, and `codeSamples`, you can add or remove items as needed
 
@@ -99,7 +101,7 @@ In the `projects` array, list the IDs of exactly 3 projects you want to showcase
 {
   "id": "acme-corp",
   "url": "acme-corp.html",
-  "projects": ["new-product-analysis", "project-2", "project-3"]
+  "projects": ["new-product-analysis", "home-server", "project-3"]
 }
 ```
 
@@ -195,6 +197,7 @@ Let's say you want to add a "Customer Segmentation Analysis" project:
   "technologies": "Python, scikit-learn, pandas, matplotlib",
   "date": "March 2024",
   "filename": "customer-segmentation.html",
+  "repoUrl": "https://github.com/username/customer-segmentation",
   "overview": "This project analyzed customer purchase behavior to identify distinct segments...",
   "objectives": [
     "Identify distinct customer segments",
@@ -232,7 +235,7 @@ Let's say you want to add a "Customer Segmentation Analysis" project:
 {
   "id": "techstart-inc",
   "url": "techstart-inc.html",
-  "projects": ["new-product-analysis", "customer-segmentation", "project-2"]
+  "projects": ["new-product-analysis", "customer-segmentation", "home-server"]
 }
 ```
 
